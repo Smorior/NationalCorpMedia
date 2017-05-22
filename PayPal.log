@@ -1,0 +1,231 @@
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[25-11-2014 08:07:20] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015gPgfyhIk9y7sZ-FDVbuQWSfaIudaM29k306LOZVQ1yo","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015gPgfyhIk9y7sZ-FDVbuQWSfaIudaM29k306LOZVQ1yo
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141694604011631
+[25-11-2014 08:07:21] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474e178420ed"}]}
+
+[25-11-2014 08:07:22] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 08:07:23] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-3NG45780381147722KR2OC6Q","create_time":"2014-11-25T20:07:22Z","update_time":"2014-11-25T20:07:23Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474e178420ed","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3NG45780381147722KR2OC6Q","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4TF87763SN804882R","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3NG45780381147722KR2OC6Q/execute","rel":"execute","method":"POST"}]}
+
+
+[25-11-2014 09:53:24] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-11-2014 09:53:24] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 09:53:24] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[25-11-2014 09:53:24] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[25-11-2014 09:53:24] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[25-11-2014 09:53:25] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015nGfOZ1KQBq6JKngEqM1.qSrzvka3AbIffMEwtk5wnW4","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015nGfOZ1KQBq6JKngEqM1.qSrzvka3AbIffMEwtk5wnW4
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141695240423473
+[25-11-2014 09:53:26] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474fa54bba5a"}]}
+
+[25-11-2014 09:53:27] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 09:53:28] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-5EC165697X8160946KR2PUVY","create_time":"2014-11-25T21:53:27Z","update_time":"2014-11-25T21:53:27Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474fa54bba5a","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5EC165697X8160946KR2PUVY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6ND275470X184513D","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5EC165697X8160946KR2PUVY/execute","rel":"execute","method":"POST"}]}
+
+
+[25-11-2014 09:54:07] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[25-11-2014 09:54:07] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 09:54:07] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[25-11-2014 09:54:07] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[25-11-2014 09:54:07] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[25-11-2014 09:54:08] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Zg3ae.DZ85DlyTjsoBnzw4GwiO6oF51-.z0V3L3waQM","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Zg3ae.DZ85DlyTjsoBnzw4GwiO6oF51-.z0V3L3waQM
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141695244741665
+[25-11-2014 09:54:09] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474fa7fcecda"}]}
+
+[25-11-2014 09:54:10] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[25-11-2014 09:54:11] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-93800877AM6663543KR2PVAY","create_time":"2014-11-25T21:54:11Z","update_time":"2014-11-25T21:54:11Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5474fa7fcecda","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-93800877AM6663543KR2PVAY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5UD28721BJ745873L","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-93800877AM6663543KR2PVAY/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:17:15] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015m4R060STCT5nbYPw.wUEoRhUdTsdOLYNPR6kCkNfE5A","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015m4R060STCT5nbYPw.wUEoRhUdTsdOLYNPR6kCkNfE5A
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 2130706433191614169862355526
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54757e7b44bfc"}]}
+
+[26-11-2014 07:17:17] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:17:19] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-5T247513815294139KR2X47I","create_time":"2014-11-26T07:17:17Z","update_time":"2014-11-26T07:17:18Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54757e7b44bfc","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5T247513815294139KR2X47I","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-71S36231T47457340","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5T247513815294139KR2X47I/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:20:56] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Yd2H9DxhmzOHfYP0J1pDAT-ywjpJ23c1awknJ4FwZsE","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Yd2H9DxhmzOHfYP0J1pDAT-ywjpJ23c1awknJ4FwZsE
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698645642079
+[26-11-2014 07:20:57] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54757f580df87"}]}
+
+[26-11-2014 07:20:58] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:20:59] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-3YA37358WT015922UKR2X6WQ","create_time":"2014-11-26T07:20:58Z","update_time":"2014-11-26T07:20:58Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54757f580df87","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3YA37358WT015922UKR2X6WQ","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-8CL42648BR725051A","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3YA37358WT015922UKR2X6WQ/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:23:54] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:23:54] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:23:54] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:23:54] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:23:54] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:23:56] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0153f5XPdgDEtiBFsA7g6L4lZW674W8PatvtJTP7JZdF7E","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0153f5XPdgDEtiBFsA7g6L4lZW674W8PatvtJTP7JZdF7E
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698663449711
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475800ac55ff"}]}
+
+[26-11-2014 07:23:57] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:23:59] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-3EE06870R0492674RKR2YADQ","create_time":"2014-11-26T07:23:58Z","update_time":"2014-11-26T07:23:58Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475800ac55ff","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3EE06870R0492674RKR2YADQ","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1GE09689LW4183849","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-3EE06870R0492674RKR2YADQ/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:24:42] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015Intai4YMKsipPkhMcWdul4ik4yzgj6N9FgR4mURbb4c","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015Intai4YMKsipPkhMcWdul4ik4yzgj6N9FgR4mURbb4c
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698668240431
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475803a39a81"}]}
+
+[26-11-2014 07:24:44] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:24:45] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-1GC949410J649022FKR2YAPA","create_time":"2014-11-26T07:24:44Z","update_time":"2014-11-26T07:24:44Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475803a39a81","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-1GC949410J649022FKR2YAPA","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-90W95692KP795812N","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-1GC949410J649022FKR2YAPA/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:25:49] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:25:49] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:25:49] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:25:49] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:25:49] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:25:50] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015vR7JgWyGYzvHtkfTThj9ajlPKecPOXsUZSHD-2i2ORU","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015vR7JgWyGYzvHtkfTThj9ajlPKecPOXsUZSHD-2i2ORU
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698674929742
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"20.00","details":{"shipping":"1.20","tax":"1.30","subtotal":"17.50"}},"item_list":{"items":[{"name":"Proizvod 1","currency":"EUR","quantity":1,"price":"7.50"},{"name":"Proizvod 2","currency":"EUR","quantity":5,"price":"2.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475807d97207"}]}
+
+[26-11-2014 07:25:51] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:25:53] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-4XS89116H7684982MKR2YA7Y","create_time":"2014-11-26T07:25:51Z","update_time":"2014-11-26T07:25:51Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"20.00","currency":"EUR","details":{"subtotal":"17.50","tax":"1.30","shipping":"1.20"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475807d97207","item_list":{"items":[{"name":"Proizvod 1","price":"7.50","currency":"EUR","quantity":"1"},{"name":"Proizvod 2","price":"2.00","currency":"EUR","quantity":"5"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4XS89116H7684982MKR2YA7Y","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-4UV96932NT0768042","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4XS89116H7684982MKR2YA7Y/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:28:46] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:28:46] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:28:46] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:28:46] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:28:46] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:28:47] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015FLHpQ7z6MUObkz1YMHpKNsl1yCfhHp5CU77G7LxS2qM","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015FLHpQ7z6MUObkz1YMHpKNsl1yCfhHp5CU77G7LxS2qM
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698692615870
+[26-11-2014 07:28:48] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"545.00","details":{"shipping":"5.00","tax":"10.00","subtotal":"530.00"}},"item_list":{"items":[{"name":"Muska kosulja","currency":"EUR","quantity":3,"price":"10.00"},{"name":"Muska jakna","currency":"EUR","quantity":1,"price":"500.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475812eea69e"}]}
+
+[26-11-2014 07:28:49] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:28:50] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-9DC95323MN964374MKR2YCMI","create_time":"2014-11-26T07:28:49Z","update_time":"2014-11-26T07:28:49Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"545.00","currency":"EUR","details":{"subtotal":"530.00","tax":"10.00","shipping":"5.00"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"5475812eea69e","item_list":{"items":[{"name":"Muska kosulja","price":"10.00","currency":"EUR","quantity":"3"},{"name":"Muska jakna","price":"500.00","currency":"EUR","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-9DC95323MN964374MKR2YCMI","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7YK66752EE812134P","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-9DC95323MN964374MKR2YCMI/execute","rel":"execute","method":"POST"}]}
+
+
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[26-11-2014 07:30:45] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A015vqvy5RPg392XhLQia60hmcKWf6r2rsXJQLo5AU1V.E0","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A015vqvy5RPg392XhLQia60hmcKWf6r2rsXJQLo5AU1V.E0
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141698704555906
+[26-11-2014 07:30:46] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"545.00","details":{"subtotal":"530.00","shipping":"5.00","tax":"10.00"}},"item_list":{"items":[{"name":"Muska kosulja","currency":"EUR","quantity":3,"price":"10.00"},{"name":"Muska jakna","currency":"EUR","quantity":1,"price":"500.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"547581a53fb3b"}]}
+
+[26-11-2014 07:30:47] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[26-11-2014 07:30:48] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-4E1420833L711633BKR2YDJY","create_time":"2014-11-26T07:30:47Z","update_time":"2014-11-26T07:30:47Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"545.00","currency":"EUR","details":{"subtotal":"530.00","tax":"10.00","shipping":"5.00"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"547581a53fb3b","item_list":{"items":[{"name":"Muska kosulja","price":"10.00","currency":"EUR","quantity":"3"},{"name":"Muska jakna","price":"500.00","currency":"EUR","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4E1420833L711633BKR2YDJY","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-20W78356FA298700Y","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-4E1420833L711633BKR2YDJY/execute","rel":"execute","method":"POST"}]}
+
+
+[28-11-2014 11:24:42] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/oauth2/token
+[28-11-2014 11:24:42] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[28-11-2014 11:24:42] PayPal\Core\PPHttpConnection: FINE: Authorization: Basic QVdBNW9oQ0JGa3BkX3E1QzVJaGNmVmNydDNickc2alRNZ1FFSDhlSjFyRUZBRW1kcjRGYUoyUENyM2pROkVFbi1peEFJMlBiV3lkM0tOd1dZUXlRSXVhQ01WcXlxRk5EYXNhZy1zVEk3ZTJMX2ZmODJDS0RhTmI0Ng==
+[28-11-2014 11:24:42] PayPal\Core\PPHttpConnection: FINE: Accept: */*
+[28-11-2014 11:24:42] PayPal\Core\PPHttpConnection: FINE: Payload : grant_type=client_credentials
+
+[28-11-2014 11:24:45] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: Response : {"scope":"https://uri.paypal.com/services/subscriptions https://api.paypal.com/v1/payments/.* https://api.paypal.com/v1/vault/credit-card https://uri.paypal.com/services/applications/webhooks openid https://uri.paypal.com/services/invoicing https://api.paypal.com/v1/vault/credit-card/.*","access_token":"A0156cOCgup8AlASnyPzNtxcndG6a2eU.Fetgow6QHGElI0","token_type":"Bearer","app_id":"APP-80W284485P519543T","expires_in":28800}
+
+
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: INFO: POST https://api.sandbox.paypal.com/v1/payments/payment
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: Content-Type: application/json
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: User-Agent: PayPalSDK/PayPal-PHP-SDK 0.14.2 (lang=PHP;v=5.3.9;bit=32;os=Windows_NT_6.1;machine=i586;openssl=0.9.8r;curl=7.21.7)
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: Authorization: Bearer A0156cOCgup8AlASnyPzNtxcndG6a2eU.Fetgow6QHGElI0
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: PayPal-Request-Id: 21307064331916141717388233013
+[28-11-2014 11:24:47] PayPal\Core\PPHttpConnection: FINE: Payload : {"intent":"sale","payer":{"payment_method":"paypal"},"redirect_urls":{"return_url":"http://localhost:81/paypaltest/sample/success.php?success=true","cancel_url":"http://localhost:81/paypaltest/sample/success.php?success=false"},"transactions":[{"amount":{"currency":"EUR","total":"545.00","details":{"subtotal":"530.00","shipping":"5.00","tax":"10.00"}},"item_list":{"items":[{"name":"Muska kosulja","currency":"EUR","quantity":3,"price":"10.00"},{"name":"Muska jakna","currency":"EUR","quantity":1,"price":"500.00"}]},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54785b7aaefd4"}]}
+
+[28-11-2014 11:24:48] PayPal\Core\PPHttpConnection: INFO: Invalid or no certificate authority found - Retrying using bundled CA certs file
+[28-11-2014 11:24:49] PayPal\Core\PPHttpConnection: FINE: Response : {"id":"PAY-7T8623367E929450BKR4FW7Y","create_time":"2014-11-28T11:24:47Z","update_time":"2014-11-28T11:24:47Z","state":"created","intent":"sale","payer":{"payment_method":"paypal","payer_info":{"shipping_address":{}}},"transactions":[{"amount":{"total":"545.00","currency":"EUR","details":{"subtotal":"530.00","tax":"10.00","shipping":"5.00"}},"description":"Kupovina na sajtu onlineProdaja.com","invoice_number":"54785b7aaefd4","item_list":{"items":[{"name":"Muska kosulja","price":"10.00","currency":"EUR","quantity":"3"},{"name":"Muska jakna","price":"500.00","currency":"EUR","quantity":"1"}]},"related_resources":[]}],"links":[{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-7T8623367E929450BKR4FW7Y","rel":"self","method":"GET"},{"href":"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-2SB02421E6639833V","rel":"approval_url","method":"REDIRECT"},{"href":"https://api.sandbox.paypal.com/v1/payments/payment/PAY-7T8623367E929450BKR4FW7Y/execute","rel":"execute","method":"POST"}]}
+
+
